@@ -26,14 +26,14 @@ public class AirportTest {
             new ExperimentalPlane("Ryan X-13 Vertijet", 560, 307, 500, ExperimentalTypes.VTOL,
                     ClassificationLevel.TOP_SECRET)
     );
-    private static MilitaryPlane transportMilitaryPlane = new MilitaryPlane("C-130 Hercules", 650, 5000,
-            110000, MilitaryType.TRANSPORT);
-    private static PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980,
-            16100, 70500, 242);
-    private static MilitaryPlane firstBomberMilitaryPlane = new MilitaryPlane("B-1B Lancer", 1050, 21000,
-            80000, MilitaryType.BOMBER);
-    private static MilitaryPlane secondBomberMilitaryPlane = new MilitaryPlane("B-2 Spirit", 1030, 22000,
-            70000, MilitaryType.BOMBER);
+    private static MilitaryPlane transportMilitaryPlane =
+            new MilitaryPlane("C-130 Hercules", 650, 5000, 110000, MilitaryType.TRANSPORT);
+    private static PassengerPlane planeWithMaxPassengerCapacity =
+            new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
+    private static MilitaryPlane firstBomberMilitaryPlane =
+            new MilitaryPlane("B-1B Lancer", 1050, 21000, 80000, MilitaryType.BOMBER);
+    private static MilitaryPlane secondBomberMilitaryPlane =
+            new MilitaryPlane("B-2 Spirit", 1030, 22000, 70000, MilitaryType.BOMBER);
 
     @Test
     public void testGetTransportMilitaryPlanes() {
