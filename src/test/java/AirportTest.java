@@ -57,7 +57,7 @@ public class AirportTest {
         airport.sortByMaxLoadCapacity();
         List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
         Assert.assertTrue(planesSortedByMaxLoadCapacity.indexOf(firstBomberMilitaryPlane)
-                < planesSortedByMaxLoadCapacity.indexOf(secondBomberMilitaryPlane));
+                > planesSortedByMaxLoadCapacity.indexOf(secondBomberMilitaryPlane));
     }
 
     @Test
