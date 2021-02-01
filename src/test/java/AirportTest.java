@@ -1,10 +1,15 @@
-import planes.*;
-import models.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import models.ClassificationLevel;
+import models.ExperimentalTypes;
+import models.MilitaryType;
+import planes.ExperimentalPlane;
+import planes.MilitaryPlane;
+import planes.PassengerPlane;
+import planes.Plane;
 
 public class AirportTest {
     private static List<Plane> planes = Arrays.asList(

@@ -1,7 +1,9 @@
-import models.MilitaryType;
-import planes.*;
 import java.util.Arrays;
 import java.util.List;
+import models.MilitaryType;
+import planes.MilitaryPlane;
+import planes.PassengerPlane;
+import planes.Plane;
 
 public class Runner {
     static List<Plane> planes = Arrays.asList(

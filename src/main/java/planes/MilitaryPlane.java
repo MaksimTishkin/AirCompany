@@ -1,7 +1,7 @@
 package planes;
 
-import models.MilitaryType;
 import java.util.Objects;
+import models.MilitaryType;
 
 public class MilitaryPlane extends Plane {
     private MilitaryType type;
