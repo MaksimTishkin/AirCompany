@@ -1,8 +1,10 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import models.ClassificationLevel;
 import models.ExperimentalTypes;
 import models.MilitaryType;
@@ -40,9 +42,10 @@ public class AirportTest {
     private static MilitaryPlane secondBomberMilitaryPlane =
             new MilitaryPlane("B-2 Spirit", 1030, 22000, 70000, MilitaryType.BOMBER);
 
+    Airport airport = new Airport(planes);
+
     @Test
     public void testGetTransportMilitaryPlanes() {
-        Airport airport = new Airport(planes);
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
         List<MilitaryPlane> expectedTransportMilitaryPlanes = new ArrayList<>();
         expectedTransportMilitaryPlanes.add(transportMilitaryPlane);
@@ -51,14 +54,12 @@ public class AirportTest {
 
     @Test
     public void testGetPassengerPlaneWithMaxCapacity() {
-        Airport airport = new Airport(planes);
         PassengerPlane actualPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
         Assert.assertEquals(planeWithMaxPassengerCapacity, actualPlaneWithMaxPassengersCapacity);
     }
 
     @Test
     public void testGetPlanesSortedByMaxLoadCapacity() {
-        Airport airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
         Assert.assertTrue(planesSortedByMaxLoadCapacity.indexOf(firstBomberMilitaryPlane)
@@ -67,7 +68,6 @@ public class AirportTest {
 
     @Test
     public void testGetBomberMilitaryPlanes() {
-        Airport airport = new Airport(planes);
         List<MilitaryPlane> actualBomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
         List<MilitaryPlane> expectedBomberMilitaryPlanes = new ArrayList<>();
         expectedBomberMilitaryPlanes.add(firstBomberMilitaryPlane);
@@ -77,7 +77,6 @@ public class AirportTest {
 
     @Test
     public void testExperimentalPlanesHasClassificationLevelHigherThanUnclassified() {
-        Airport airport = new Airport(planes);
         List<ExperimentalPlane> experimentalPlanes = airport.getExperimentalPlanes();
         boolean hasUnclassifiedPlanes = false;
         for(ExperimentalPlane experimentalPlane : experimentalPlanes) {
